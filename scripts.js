@@ -1,6 +1,6 @@
 // Typed Intro
 var typed = new Typed('.text', {
-    strings: ['Web Developer.', '&amp; IoT Developer.'],
+    strings: ['Web Developer.', '&amp; IoT Enginner.'],
     typeSpeed:100,
     backSpeed:100,
     backDelay:1000,
@@ -23,50 +23,57 @@ document.querySelectorAll('nav a').forEach(anchor => {
       }
     });
 });
-
-
-// Validasi Form
-function getData() {
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
-    const message = document.getElementById("message").value;
-    return {
-        name,
-        phone,
-        message
-    };
+// no 5
+function handleGetFormData() {
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var city = document.getElementById("city").value;
+  var zipCode = document.getElementById("zip-code").value;
+  var status = document.getElementById("status").checked;
+  var formData = {
+  name: name,
+  email: email,
+  city: city,
+  zipCode: zipCode,
+  status: status
+  };
+  return formData;
 }
 
-function checkPhoneNumber(phone) {
-    if (phone && !isNaN(phone)) {
-        return true;
-    } else {
-        return false;
-    }
+// Function untuk melakukan validasi zip-code no 7
+function isNumber(value) {
+  return !isNaN(value);
 }
 
-function formValidation(props) {
-    if (props.name !== "" && props.message !== "" && checkPhoneNumber(props.phone)) {
-        return true;
-    } else {
-        return false;
-    }
+// Function untuk memeriksa apakah checkbox dicentang no 8
+
+function checkboxIsChecked() {
+  var checkbox = document.getElementById("status");
+  return checkbox.checked;
 }
 
-function submitData() {
-    const ambilData = getData();
-    if (formValidation(ambilData) === true) {
-        document.getElementById("warn").innerHTML = `
-            <h5 style='background-color: #04AA6D; color: #fff; padding: 10px; border-radius: 10px;'>Message Sent</h5>
-        `; 
-    } else {
-        document.getElementById("warn").innerHTML = `
-            <h5 style='background-color: #f87171; color: #fff; padding: 10px; border-radius: 10px;'>Please check your input and submit the form again.</h5>
-        `;
-    }
+// Function untuk melakukan validasi data form no 9
+
+function validateFormData(formData) {
+  if (formData &&
+    isNumber(formData.zipCode) &&
+    checkboxIsChecked()) {
+    return true;
+  }else {
+    return false;
+  }
+}
+// no 10
+function submit() {
+  if (validateFormData(handleGetFormData()) == false) {
+    document.getElementById("warning").textContent = "Periksa form anda sekali lagi";
+  } else {
+    document.getElementById("warning").textContent = "";
+  }
 }
 
-document.getElementById("send").addEventListener("click", function(event){
-    submitData();
-    event.preventDefault();
+// Event listener untuk menangani submit form
+document.getElementById("submit-form").addEventListener("click", (event) => {
+  event.preventDefault();
+  submit();
 });
