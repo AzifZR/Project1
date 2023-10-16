@@ -1,0 +1,426 @@
+*, html, body, section {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+body {
+  background-color: #141E46;
+}
+/* Navigator bar */
+.FContainer {
+    display: flex;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    background-color: #141E46;
+    z-index: 100;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    padding: 5px;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+}
+
+.brand {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.fristname {
+    color: white;
+    font-weight: 600;
+}
+
+.lastname {
+    color: white;
+    padding-left: 5px;
+    font-weight: 400;
+}
+
+.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav > li {
+    list-style-type: none;
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.nav > li > a {
+    color: #C70039;
+    text-transform: capitalize;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.nav > li > a:hover {
+    color: #FF6969;
+    transition: all .3s ease-in-out;
+}
+/* Home */
+.home{
+  position: relative;
+  justify-content: space-between;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background:url(/assest/profil2.png) no-repeat;
+  background-size: 100%;
+  background-position: right;
+  align-items: center;
+} 
+
+.intro {
+  padding-left: 70px;
+}
+
+.intro > h3, h1, p {
+  position: relative;
+  width: 100%;
+  color: #f1f1f1;
+  padding-left: 70px;
+}
+
+.intro > h3 {
+  font-size: 25px;
+}
+
+.intro > h1 {
+  font-size: 35px;
+}
+
+.intro > p {
+  font-size: 20px;
+}
+
+.intro p b {
+  color: aqua;
+}
+
+.intro > h3 > span {
+  color: aqua;
+}
+
+.home-sci {
+  padding-left: 70px;
+}
+
+.home-sci a {
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid aqua;
+  border-radius: 50%;
+  background: transparent;
+  text-decoration: none;
+  font-size: 20px;
+  color: aqua;
+  margin: 10px 15px 30px 0;
+}
+
+.home-sci a:hover {
+  background: aqua;
+  color: #141E46;
+  box-shadow: 0 0 20px aqua;
+}
+
+.btx-box {
+  display: inline-block;
+  padding: 20px 12px;
+  background: aqua;
+  border-radius: 50%;
+  font-size: 16px;
+  text-decoration: none;
+  color: #081b29;
+  font-weight: 600;
+}
+
+.btx-box:hover {
+  box-shadow: 0 0 5px cyan, 
+  0 0 25px cyan, 0 0 50px cyan;
+}
+
+
+/* about */
+
+#hal2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.img {
+  margin-top: 120px;
+  margin-left: 20px;
+  margin-bottom: 100px;
+}
+
+.text {
+  margin-top: 190px;
+  color: #fff;
+}
+.text h3 {
+  font-size: 25px;
+}
+.text span {
+  color: aqua;
+}
+.text h4 {
+  font-size: 25px;
+  margin-left: 10px;
+}
+.text p {
+  margin-left: -35px;
+  font-size: 19px;
+}
+
+/* Skills */
+
+#hal3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container1 {
+  width: 600px;
+  height: 500px;
+  padding: 75px 90px; 
+  margin-left: 120px;
+}
+
+.sub-title {
+  padding-top: 100px;
+  padding-bottom: 20px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.sub-title span {
+  color: aqua;
+  padding-left: 10px;
+}
+
+.heading1 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  font-size: 25px;
+  margin-bottom: 50px;
+}
+
+.Technical-bar span {
+  color: #f1f1f1;
+}
+.bar {
+  font-size: 23px;
+}
+.Technical-bar .bar {
+  margin-top: 40px 0;
+}
+.Technical-bar .bar:first-child {
+  margin-top: 0;
+}
+.Technical-bar .bar:last-child {
+  margin-bottom: 0;
+}
+.Technical-bar .bar .info {
+  margin-bottom: 5px;
+}
+.Technical-bar .bar .info span {
+  font-size: 17px;
+  font-weight: 500;
+  opacity: 0;
+}
+.Technical-bar .bar .progress-line {
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  width: 100%;
+  height: 5px;
+  background-color: #000;
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.Technical-bar .bar .progress-line span {
+  height: 100%;
+  background-color: aqua;
+  position: absolute;
+  border-radius: 10px;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.progress-line.html span {
+  width: 90%;
+}
+.progress-line.css span {
+  width: 60%;
+}
+.progress-line.javascript span {
+  width: 30%;
+}
+.progress-line.python span {
+  width: 40%;
+}
+.progress-line span::after{
+  position: absolute;
+  padding: 1px 8px;
+  background-color: #000;
+  color: #f1f1f1;
+  font-size: 12px;
+  border-radius: 3px;
+  top: -28px;
+  right: -20px;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0; 
+}
+.progress-line.html span::after{
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "60%";
+}
+.progress-line.javascript span::after{
+  content: "30%";
+}
+.progress-line.python span::after{
+  content: "40%";
+}
+.progress-line span::before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  top: -10px;
+  right: 0;
+  animation: showText 0.5s 1.5s linear forwards;
+  opacity: 0;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+
+/* Contact Us */
+.row {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 2% auto;
+    padding: 1%;
+  }
+  
+  .col {
+    flex: 50%;
+    padding: 5px 10px;
+  }
+  
+  .col img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .col > h3 {
+    color: #C70039;
+  }
+
+  .col > form > label{
+    color: #ce231c;
+  }
+  
+  label {
+    display: block;
+    padding-top: 5px;
+  }
+  
+  input, textarea {
+    border: 1px solid gray;
+    background-color: #f1f1f1;
+    width: 90%;
+    padding: 5px;
+    border-radius: 5px;
+  }
+  
+  input:focus,
+  textarea:focus {
+      outline: none;
+  }
+  
+  button {
+    display: block;
+    background-color: #ce231c;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+  }
+
+  #warn {
+    height: 30px;
+    padding: 5px 0;
+  }
+  /* Footer */
+  footer {
+    position: absolute;
+    width: 99%;
+    text-align: center;
+    padding: 5px;
+    background-color: #ce231c;
+    color: #fff;
+  }
+
+  /* CSS dasar yang sama seperti sebelumnya */
+
+/* Tablet Landscape */
+@media (min-width: 768px) {
+  .nav {
+    font-size: 24px;
+  }
+  .intro{
+    height: auto;
+    width: 50%;
+  }
+  .intro > h3 {
+    font-size: 30px;
+  }
+  /* Tambahkan perubahan gaya lainnya di sini */
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+  .nav {
+    font-size: 18px;
+  }
+  .intro {
+    height: auto;
+    width: 80%;
+  }
+  .intro > h3 {
+    font-size: 24px;
+  }
+  /* Tambahkan perubahan gaya lainnya di sini */
+}
