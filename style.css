@@ -76,11 +76,11 @@ body {
   display: flex;
   width: 100%;
   height: 100vh;
-  background:url(/assest/profil2.png) no-repeat;
+  background:url(https://cdn.discordapp.com/attachments/1158721587600695327/1158730153942335539/profil2.png?ex=651d4f0c&is=651bfd8c&hm=3bdcbcc0e247cc29c1a7ede533f0ef4201bb853f04ed75f2e468ed9e20660213&) no-repeat;
   background-size: 100%;
   background-position: right;
   align-items: center;
-} 
+}
 
 .intro {
   padding-left: 70px;
@@ -138,7 +138,7 @@ body {
   box-shadow: 0 0 20px aqua;
 }
 
-.btx-box {
+#link {
   display: inline-block;
   padding: 20px 12px;
   background: aqua;
@@ -149,12 +149,10 @@ body {
   font-weight: 600;
 }
 
-.btx-box:hover {
+#link:hover {
   box-shadow: 0 0 5px cyan, 
   0 0 25px cyan, 0 0 50px cyan;
 }
-
-
 /* about */
 
 #hal2 {
@@ -242,7 +240,7 @@ body {
 .Technical-bar .bar .info span {
   font-size: 17px;
   font-weight: 500;
-  opacity: 0;
+  /* opacity: 0; */
 }
 .Technical-bar .bar .progress-line {
   position: relative;
@@ -270,7 +268,7 @@ body {
   transform-origin: left;
 }
 .progress-line.html span {
-  width: 90%;
+  width: 80%;
 }
 .progress-line.css span {
   width: 60%;
@@ -294,7 +292,7 @@ body {
   opacity: 0; 
 }
 .progress-line.html span::after{
-  content: "90%";
+  content: "80%";
 }
 .progress-line.css span::after{
   content: "60%";
@@ -324,6 +322,7 @@ body {
     opacity: 1;
   }
 }
+
 
 /* Contact Us */
 .row {
@@ -357,7 +356,7 @@ body {
     padding-top: 5px;
   }
   
-  input, textarea {
+  input {
     border: 1px solid gray;
     background-color: #f1f1f1;
     width: 90%;
@@ -365,8 +364,7 @@ body {
     border-radius: 5px;
   }
   
-  input:focus,
-  textarea:focus {
+  input:focus {
       outline: none;
   }
   
@@ -379,9 +377,10 @@ body {
     border-radius: 3px;
   }
 
-  #warn {
+  #warning {
     height: 30px;
     padding: 5px 0;
+    color: #ce231c;
   }
   /* Footer */
   footer {
@@ -392,8 +391,6 @@ body {
     background-color: #ce231c;
     color: #fff;
   }
-
-  /* CSS dasar yang sama seperti sebelumnya */
 
 /* Tablet Landscape */
 @media (min-width: 768px) {
